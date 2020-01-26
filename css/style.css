@@ -1,12 +1,9 @@
 @import url("reset.css");
 @import url("normalize.css");
+@import url("media.css");
 @import url("font-awesome/css/font-awesome.min.css");
 body {
   font-family: 'Comfortaa', cursive;
-}
-
-section {
-  overflow: hidden;
 }
 
 #preloader {
@@ -382,15 +379,21 @@ section {
 .about_me_block_wrapper {
   background-color: #2B2B2B;
   padding: 60px 0px;
+  position: relative;
 }
 
-.about_me_block_wrapper .about_me_block {
+.about_me_block_wrapper .about_me_block_hide {
+  overflow: hidden;
+}
+
+.about_me_block_wrapper .about_me_block_hide .about_me_block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
-.about_me_block_wrapper .about_me_block .photo-side-wrapper {
+.about_me_block_wrapper .about_me_block_hide .about_me_block .photo-side-wrapper {
   width: 210px;
   height: 210px;
   background-color: #11ABB0;
@@ -405,7 +408,7 @@ section {
   transition: 2s;
 }
 
-.about_me_block_wrapper .about_me_block .photo-side-wrapper .photo-side {
+.about_me_block_wrapper .about_me_block_hide .about_me_block .photo-side-wrapper .photo-side {
   display: inline-block;
   width: 200px;
   height: 200px;
@@ -422,11 +425,11 @@ section {
           box-shadow: -6px 8px 12px 0px rgba(0, 0, 0, 0.5);
 }
 
-.about_me_block_wrapper .about_me_block .photo-side-wrapper .photo-side img {
+.about_me_block_wrapper .about_me_block_hide .about_me_block .photo-side-wrapper .photo-side img {
   width: 100%;
 }
 
-.about_me_block_wrapper .about_me_block .photo-side-wrapper .photo-side-oval {
+.about_me_block_wrapper .about_me_block_hide .about_me_block .photo-side-wrapper .photo-side-oval {
   width: 30px;
   height: 20px;
   background-color: #11ABB0;
@@ -441,7 +444,7 @@ section {
           transform: rotate(144deg);
 }
 
-.about_me_block_wrapper .about_me_block .text-side {
+.about_me_block_wrapper .about_me_block_hide .about_me_block .text-side {
   width: 75%;
   padding: 0px 20px;
   -webkit-box-sizing: border-box;
@@ -451,29 +454,29 @@ section {
   transition: 2s;
 }
 
-.about_me_block_wrapper .about_me_block .text-side h2 {
+.about_me_block_wrapper .about_me_block_hide .about_me_block .text-side h2 {
   font-size: 22px;
   color: #fff;
   margin-bottom: 12px;
 }
 
-.about_me_block_wrapper .about_me_block .text-side p {
+.about_me_block_wrapper .about_me_block_hide .about_me_block .text-side p {
   line-height: 30px;
   color: #7A7A7A;
   margin: 0 0 30px 0;
 }
 
-.about_me_block_wrapper .about_me_block .text-side .contact_details_block {
+.about_me_block_wrapper .about_me_block_hide .about_me_block .text-side .contact_details_block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.about_me_block_wrapper .about_me_block .text-side .download-button {
+.about_me_block_wrapper .about_me_block_hide .about_me_block .text-side .download-button {
   margin: 10px 20px;
 }
 
-.about_me_block_wrapper .about_me_block .text-side .download-button .button {
+.about_me_block_wrapper .about_me_block_hide .about_me_block .text-side .download-button .button {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -483,17 +486,30 @@ section {
   font-size: 16px;
 }
 
-.about_me_block_wrapper .about_me_block .text-side .download-button .button:hover {
+.about_me_block_wrapper .about_me_block_hide .about_me_block .text-side .download-button .button:hover {
   background-color: #ebeeee;
   color: black;
 }
 
-.about_me_block_wrapper .about_me_block .text-side .download-button .button i {
+.about_me_block_wrapper .about_me_block_hide .about_me_block .text-side .download-button .button i {
   margin-right: 10px;
 }
 
-.education_block_wrapper {
-  height: 1000px;
+.about_me_block_wrapper .working_gif {
+  width: 400px;
+  height: 290px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 8%;
+  bottom: -90px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+.about_me_block_wrapper .working_gif img {
   width: 100%;
 }
 
@@ -504,6 +520,253 @@ section {
   background: url(../img/computer-1245714_1920.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.education_block_wrapper .education_title {
+  text-align: center;
+  font-size: 32px;
+  padding: 60px 0px;
+  position: relative;
+}
+
+.education_block_wrapper .education_title::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 6px;
+  background-color: #11ABB0;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -50px;
+}
+
+.education_block_wrapper .cards_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.education_block_wrapper .cards_block .card_container {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  padding-left: 1%;
+  width: 25%;
+}
+
+.education_block_wrapper .cards_block .card_container .card {
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.education_block_wrapper .cards_block .card_container .card .front,
+.education_block_wrapper .cards_block .card_container .card .back {
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.26);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.education_block_wrapper .cards_block .card_container .card .front {
+  background-color: #11ABB0;
+  padding: 20px;
+}
+
+.education_block_wrapper .cards_block .card_container .card .front .card_title {
+  font-size: 18px;
+}
+
+.education_block_wrapper .cards_block .card_container .card .front .logo_it_academy {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  margin: 5px auto;
+}
+
+.education_block_wrapper .cards_block .card_container .card .front .logo_it_academy img {
+  width: 55%;
+  position: relative;
+  top: 9px;
+}
+
+.education_block_wrapper .cards_block .card_container .card .front .logo_rs {
+  width: 100px;
+  height: 100px;
+  margin: 5px auto;
+}
+
+.education_block_wrapper .cards_block .card_container .card .front .logo_rs img {
+  width: 100%;
+  position: relative;
+  top: 24px;
+}
+
+.education_block_wrapper .cards_block .card_container .card .back {
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 14px;
+  text-align: left;
+  background-color: #636363;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  padding: 20px;
+  text-align: center;
+}
+
+.education_block_wrapper .cards_block .card_container .card:hover {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.education_block_wrapper .cards_block .card_container .card.flipped {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.education_block_wrapper .job_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 60px;
+}
+
+.education_block_wrapper .job_info .skills {
+  width: 50%;
+}
+
+.education_block_wrapper .job_info .skills ul {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.education_block_wrapper .job_info .skills ul li {
+  position: relative;
+  line-height: 2;
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+.education_block_wrapper .job_info .skills ul li:before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url(../img/checkmark.svg) no-repeat center center;
+  background-size: contain;
+  left: 0;
+}
+
+.education_block_wrapper .job_info .info {
+  width: 50%;
+  line-height: 2;
+}
+
+.education_block_wrapper .portfolio_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 60px;
+}
+
+.education_block_wrapper .portfolio_block .portfolio_item_wrapper {
+  width: calc(100%/5 - 15px);
+  border: 1px solid;
+  margin: 5px;
+  position: relative;
+  color: #ebeeee;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.education_block_wrapper .portfolio_block .portfolio_item_wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.education_block_wrapper .portfolio_block .portfolio_item_wrapper:hover .portfolio_loop {
+  top: 20%;
+}
+
+.education_block_wrapper .portfolio_block .portfolio_item_wrapper:hover .portfolio_layer {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.education_block_wrapper .portfolio_block .portfolio_item_wrapper:hover .portfolio_link {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.education_block_wrapper .portfolio_block .portfolio_loop {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  top: 50%;
+  z-index: 2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.education_block_wrapper .portfolio_block .portfolio_loop img {
+  width: 100%;
+}
+
+.education_block_wrapper .portfolio_block .portfolio_layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.education_block_wrapper .portfolio_block .portfolio_link {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin-left: -78.5px;
+  z-index: 2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.education_block_wrapper .portfolio_block .portfolio_link a {
+  color: #ebeeee;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.education_block_wrapper .portfolio_block .portfolio_link a:hover {
+  color: #11ABB0;
 }
 
 @-webkit-keyframes slideInLeft {
@@ -634,5 +897,33 @@ section {
   -webkit-animation: fadeIn ease 4s;
           animation: fadeIn ease 4s;
   opacity: 1;
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1 !important;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1 !important;
+  }
+}
+
+.zoomIn {
+  -webkit-animation: zoomIn;
+          animation: zoomIn;
+  opacity: 1 !important;
 }
 /*# sourceMappingURL=style.css.map */

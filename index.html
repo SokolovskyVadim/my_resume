@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap" rel="stylesheet">
     <title>Sokolovsky-Portfolio</title>
 </head>
@@ -106,49 +107,238 @@
         </div>
     </header>
     <section class="about_me_block_wrapper" id="about-me">
-        <div class="container about_me_block">
-            <div class="photo-side-wrapper">
-                <div class="photo-side">
-                    <img src="img/me.jpg" alt="мое фото">
+        <div class="about_me_block_hide">
+            <div class="container about_me_block">
+                <div class="photo-side-wrapper">
+                    <div class="photo-side">
+                        <img src="img/me.jpg" alt="мое фото">
+                    </div>
+                    <div class="photo-side-oval"></div>
                 </div>
-                <div class="photo-side-oval"></div>
-            </div>
-            <div class="text-side">
-                <h2>Обо мне</h2>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam,
-                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                    Nemo enim ipsam
-                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-                    qui ratione
-                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                    consectetur, adipisci velit,
-                    sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                    voluptatem.
-                    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
-                </p>
-                <div class="contact_details_block">
-                    <div class="contact_details">
-                        <h2>Контактные данные</h2>
-                        <p class="address">
-                            <span>Вадим Соколовский</span><br>
-                            <span>г. Минск, РБ<br>
-                            </span><br>
-                            <span>+375 &#40;44&#41; 702-47-05</span><br>
-                            <span>sokolovsky.v.a@gmail.com</span>
-                        </p>
+                <div class="text-side">
+                    <h2>Обо мне</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam,
+                        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                        explicabo.
+                        Nemo enim ipsam
+                        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+                        eos
+                        qui ratione
+                        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                        consectetur, adipisci velit,
+                        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                        voluptatem.
+                        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+                    </p>
+                    <div class="contact_details_block">
+                        <div class="contact_details">
+                            <h2>Контактные данные</h2>
+                            <p class="address">
+                                <span>Вадим Соколовский</span><br>
+                                <span>г. Минск, РБ<br>
+                                </span><br>
+                                <span>+375 &#40;44&#41; 702-47-05</span><br>
+                                <span>sokolovsky.v.a@gmail.com</span>
+                            </p>
+                        </div>
+                        <div class="download-button">
+                            <p>
+                                <a href="#" class="button"><i class="fa fa-download"></i>Скачать резюме</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="download-button">
-                        <p>
-                            <a href="#" class="button"><i class="fa fa-download"></i>Скачать резюме</a>
-                        </p>
-                    </div>
-                </div> <!-- end row -->
+                </div>
             </div>
+        </div>
+        <div class="working_gif">
+            <img src="img/working.gif" alt="working.gif">
         </div>
     </section>
     <section class="education_block_wrapper">
-
+        <div class="container">
+            <div class="education_title">
+                Моё IT образование
+            </div>
+            <div class="card_wrapper">
+                <div class="cards_block">
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="front">
+                                <div class="logo_it_academy">
+                                    <img src="/img/logo-it-academy.svg" alt="logo-it-academy">
+                                </div>
+                                <h3 class="card_title">Основы веб-технологий</h3>
+                            </div>
+                            <div class="back">
+                                <div class="content">
+                                    <h3 class="card_title">основы построения веб-приложений "с нуля" с постоянным
+                                        увеличением сложности и нарастанием технологий, понять разработку изнутри
+                                        front-end и back-end, что происходит между ними, как они взаимодействуют и
+                                        отслеживать это.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="front">
+                                <div class="logo_it_academy">
+                                    <img src="/img/logo-it-academy.svg" alt="logo-it-academy">
+                                </div>
+                                <h3 class="card_title">Разработка веб-сайтов с использованием HTML, CSS и JavaScript
+                                </h3>
+                            </div>
+                            <div class="back">
+                                <div class="content">
+                                    <h3 class="card_title">Этот курс для того, чтобы получить знания о языках
+                                        программирования HTML, CSS и JavaScript, начиная от разбора синтаксиса и тегов и
+                                        заканчивая созданием блоков, форм и целых страниц. Я научился пользоваться
+                                        инструментами верстки и самостоятельно писать код для браузеров.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="front">
+                                <div class="logo_it_academy">
+                                    <img src="/img/logo-it-academy.svg" alt="logo-it-academy">
+                                </div>
+                                <h3 class="card_title">Разработка веб-приложений на JavaScript</h3>
+                            </div>
+                            <div class="back">
+                                <div class="content">
+                                    <h3 class="card_title">Для того, чтобы получить знания о языке программирования
+                                        JavaScript: научиться «читать» код, разбирать его по полочкам и создавать
+                                        веб-приложения самостоятельно, применяя различные фреймворки и библиотеки.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <div class="front">
+                                <div class="logo_rs">
+                                    <img src="/img/logo_rs_text.svg" alt="logo-it-academy">
+                                </div>
+                                <h3 class="card_title">JAVASCRIPT DEVELOPMENT (RS SCHOOL)</h3>
+                            </div>
+                            <div class="back">
+                                <div class="content">
+                                    <h3 class="card_title">Тренинг проводится под эгидой сообщества профессиональных
+                                        фронтэнд разработчиков Rolling Scopes. Тренинг посвящён современным подходам,
+                                        технологиям и инструментальным средствам разработки веб-приложений с
+                                        использованием языка программирования JavaScript.​</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="education_title">
+                Мой опыт работы и скилы
+            </div>
+            <div class="job_info">
+                <div class="skills">
+                    <ul>
+                        <li>
+                            HTML5
+                        </li>
+                        <li>
+                            CSS3
+                        </li>
+                        <li>
+                            JavaScript
+                        </li>
+                        <li>
+                            jQuery
+                        </li>
+                        <li>
+                            CMS Wordpress
+                        </li>
+                        <li>
+                            PHP
+                        </li>
+                    </ul>
+                </div>
+                <div class="info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam deleniti officiis harum inventore
+                    cum perspiciatis at iste. Enim autem repellendus temporibus minus asperiores quaerat, quas animi
+                    provident hic atque architecto! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+                    deleniti officiis harum inventore cum perspiciatis at iste. Enim autem repellendus temporibus minus
+                    asperiores quaerat, quas animi provident hic atque architecto! Lorem ipsum, dolor sit amet
+                    consectetur adipisicing elit. Quisquam deleniti officiis harum inventore cum perspiciatis at iste.
+                    Enim autem repellendus temporibus minus asperiores quaerat, quas animi provident hic atque
+                    architecto!
+                </div>
+            </div>
+            <div class="education_title">
+                Мой портфолио
+            </div>
+            <div class="portfolio_block">
+                <div class="portfolio_item_wrapper">
+                    <a data-fancybox="portfolio_gallery" href="img/headphones.webp" class="portfolio_item">
+                        <img src="img/headphones-min.webp" alt="headphones">
+                        <div class="portfolio_layer"></div>
+                        <div class="portfolio_loop">
+                            <img src="img/magnifying-glass.svg" alt="увеличение">
+                        </div>
+                    </a>
+                    <div class="portfolio_link">
+                        <a href="https://sokolovskyvadim.github.io/9-9-headphones/" target="_blank">Ссылка на сайт</a>
+                    </div>
+                </div>
+                <div class="portfolio_item_wrapper">
+                    <a data-fancybox="portfolio_gallery" href="img/headphones.webp" class="portfolio_item">
+                        <img src="img/headphones-min.webp" alt="headphones">
+                        <div class="portfolio_layer"></div>
+                        <div class="portfolio_loop">
+                            <img src="img/magnifying-glass.svg" alt="увеличение">
+                        </div>
+                    </a>
+                    <div class="portfolio_link">
+                        <a href="https://sokolovskyvadim.github.io/9-9-headphones/" target="_blank">Ссылка на сайт</a>
+                    </div>
+                </div>
+                <div class="portfolio_item_wrapper">
+                    <a data-fancybox="portfolio_gallery" href="img/headphones.webp" class="portfolio_item">
+                        <img src="img/headphones-min.webp" alt="headphones">
+                        <div class="portfolio_layer"></div>
+                        <div class="portfolio_loop">
+                            <img src="img/magnifying-glass.svg" alt="увеличение">
+                        </div>
+                    </a>
+                    <div class="portfolio_link">
+                        <a href="https://sokolovskyvadim.github.io/9-9-headphones/" target="_blank">Ссылка на сайт</a>
+                    </div>
+                </div>
+                <div class="portfolio_item_wrapper">
+                    <a data-fancybox="portfolio_gallery" href="img/headphones.webp" class="portfolio_item">
+                        <img src="img/headphones-min.webp" alt="headphones">
+                        <div class="portfolio_layer"></div>
+                        <div class="portfolio_loop">
+                            <img src="img/magnifying-glass.svg" alt="увеличение">
+                        </div>
+                    </a>
+                    <div class="portfolio_link">
+                        <a href="https://sokolovskyvadim.github.io/9-9-headphones/" target="_blank">Ссылка на сайт</a>
+                    </div>
+                </div>
+                <div class="portfolio_item_wrapper">
+                    <a data-fancybox="portfolio_gallery" href="img/headphones.webp" class="portfolio_item">
+                        <img src="img/headphones-min.webp" alt="headphones">
+                        <div class="portfolio_layer"></div>
+                        <div class="portfolio_loop">
+                            <img src="img/magnifying-glass.svg" alt="увеличение">
+                        </div>
+                    </a>
+                    <div class="portfolio_link">
+                        <a href="https://sokolovskyvadim.github.io/9-9-headphones/" target="_blank">Ссылка на сайт</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="parallax_block">
 
@@ -159,7 +349,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- <script src="js/fa.js"></script> -->
+    <script src="lib/fancybox/jquery.fancybox.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 
