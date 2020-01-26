@@ -1,8 +1,7 @@
 jQuery(document).ready(function($) {  
-    $(window).on('load', function() { 
+    $(function() { 
         $('#loader').fadeOut();
         $('#preloader').delay(350).fadeOut('slow');
-        // $('body').delay(350).css({'overflow':'visible'});
     }) 
 });
 
