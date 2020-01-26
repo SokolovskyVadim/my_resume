@@ -50,6 +50,72 @@ jQuery(document).ready(function($) {
 
     });
 });
+jQuery(document).ready(function($) {  
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        // var box1 = $('.about_me_block_wrapper').offset().top;
+        if(height > 900){
+        $('.card1').addClass('fadeIn');
+        } else{
+        $('.card1').removeClass('fadeIn');
+        }
+
+    });
+});
+jQuery(document).ready(function($) {
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        // var box1 = $('.about_me_block_wrapper').offset().top;
+        setTimeout(function(){  
+            if(height > 900){
+            $('.card2').addClass('fadeIn');
+            } else{
+            $('.card2').removeClass('fadeIn');
+            }
+        }, 400);
+    }); 
+});
+jQuery(document).ready(function($) {
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        // var box1 = $('.about_me_block_wrapper').offset().top;
+        setTimeout(function(){  
+            if(height > 900){
+            $('.card3').addClass('fadeIn');
+            } else{
+            $('.card3').removeClass('fadeIn');
+            }
+        }, 800);
+    }); 
+});
+jQuery(document).ready(function($) {
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        // var box1 = $('.about_me_block_wrapper').offset().top;
+        setTimeout(function(){  
+            if(height > 900){
+            $('.card4').addClass('fadeIn');
+            } else{
+            $('.card4').removeClass('fadeIn');
+            }
+        }, 1200);
+    }); 
+});
+jQuery(document).ready(function($) {  
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        // var box1 = $('.about_me_block_wrapper').offset().top;
+        if(height > 900){
+        $('.card1').addClass('fadeIn');
+        } else{
+        $('.card1').removeClass('fadeIn');
+        }
+
+    });
+});
+
+
+
 jQuery(document).ready(function($) {
     $(window).bind('scroll',function(e){
         parallaxScroll();

@@ -553,6 +553,7 @@ body {
           perspective: 800px;
   padding-left: 1%;
   width: 25%;
+  opacity: 0;
 }
 
 .education_block_wrapper .cards_block .card_container .card {
@@ -565,6 +566,8 @@ body {
   transition: transform 0.6s, -webkit-transform 0.6s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .education_block_wrapper .cards_block .card_container .card .front,
@@ -896,7 +899,7 @@ body {
 .fadeIn {
   -webkit-animation: fadeIn ease 4s;
           animation: fadeIn ease 4s;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 @-webkit-keyframes zoomIn {
