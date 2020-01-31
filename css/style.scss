@@ -95,7 +95,7 @@ body {
 
 
 .container {
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
@@ -260,8 +260,8 @@ body {
     }
     .parralax-to-top_block4 {
         position: absolute;
-            top: 500px;
-            right: 30%;
+        top: 550px;
+        right: 25%;
         .parralax-to-top-item4 {
             position: absolute;
             top: 0;
@@ -315,7 +315,7 @@ body {
                 margin: 0px 20px;
                 border-radius: 100%;
                 box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.5);
-                opacity: 0;
+                opacity: 1;
                 transition: 2s;
                 .photo-side {
                     display: inline-block;
@@ -351,7 +351,7 @@ body {
                 width: 75%;
                 padding: 0px 20px;
                 box-sizing: border-box;
-                opacity: 0;
+                opacity: 1;
                 transition: 2s;
                 h2 {
                     font-size: 22px;
@@ -403,15 +403,6 @@ body {
         }
     }
 }
-
-.parallax_block {
-    width: 100%;
-    max-height: 400px;
-    height: 400px;
-    background: url(../img/computer-1245714_1920.jpg) no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-}
 .education_block_wrapper {
     .education_title {
         text-align: center;
@@ -431,12 +422,15 @@ body {
     }
     .cards_block {
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         .card_container {
             transition: all 0.3s ease;
             perspective: 800px;
-            padding-left: 1%;
-            width: 25%;
-            opacity: 0;
+            margin: 5px;
+            padding: 2px;
+            width: 250px;
+            opacity: 1;
             .card {
                 width: 100%;
                 height: 200px;
@@ -459,8 +453,10 @@ body {
                 .front {
                     background-color: $elemColor;
                     padding: 20px;
+                    transform: rotateY(0deg);
+                    transition: all 0.3s ease;
                     .card_title {
-                        font-size: 18px;
+                        font-size: 16px;
                     }
                     .logo_it_academy {
                         width: 100px;
@@ -495,20 +491,21 @@ body {
                     transform: rotateY(180deg);
                     padding: 20px;
                     text-align: center;
-                }
-                &:hover {
-                    -webkit-transform: rotateY(180deg);
-                    -moz-transform: rotateY(180deg);
-                    -o-transform: rotateY(180deg);
-                    transform: rotateY(180deg);
-                }
+                    transition: all 0.3s ease;
+                } 
             }
-            .card.flipped {
-                -webkit-transform: rotateY(180deg);
-                -moz-transform: rotateY(180deg);
-                -o-transform: rotateY(180deg);
+            &:hover .front {
                 transform: rotateY(180deg);
             }
+            &:hover .back{
+                transform: rotateY(0deg);
+            }
+            .card-back-back {
+                transform: rotateY(-180deg) !important;
+            }
+            .flipcard-wrap-back {
+                transform: rotateY(0deg) !important;
+            }            
         }
     }
     .job_info {
@@ -518,7 +515,7 @@ body {
             width: 50%;
             ul {
                 margin: 0 auto;
-                width: 300px;
+                max-width: 300px;
                 li{
                     position: relative;
                     line-height: 2;
@@ -541,14 +538,16 @@ body {
             line-height: 2;
         }
     }
-    .portfolio_block {
+}
+.portfolio_block {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         padding-bottom: 60px;
         .portfolio_item_wrapper {
-            width: calc(100%/5 - 15px);
+            width: 219px;
             border: 1px solid;
-            margin: 5px;
+            margin: 5px 5px 36px 5px;
             position: relative;
             color: $bgColor2;
             text-decoration: none;
@@ -601,7 +600,8 @@ body {
             position: absolute;
             top: 70%;
             left: 50%;
-            margin-left: -78.5px;
+            transform: translateX(-50%);
+            text-align: center;
             z-index: 2;
             transition: 0.5s;
             a {
@@ -614,8 +614,108 @@ body {
                 }
             }
         }
+        .portfolio_link_mobile {
+            display: none;
+            text-align: center;
+            a {
+                color: $bgColor3;
+                text-decoration: none;
+                font-size: 18px;
+                cursor: pointer;
+                &:hover {
+                    color: $elemColor;
+                }
+
+        }
     }
 }
+.parallax_block {
+    width: 100%;
+    background: url(../img/computer-1245714_1920.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    .layer {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        box-sizing: border-box;
+        padding: 60px 0px;
+        .bottom_slider {
+            padding: 60px 0px;
+            box-sizing: border-box;
+            margin: 0 !important;
+            .bottom_slide_item {
+                width: 100%;
+                height: 100%;
+            }
+            .slick-slide {
+                position: relative;
+            }
+            .slider-text{
+                font-size: 25px;
+                text-align: center;
+                color: white;
+                color: white;
+                padding: 20px 40px;
+                box-sizing: border-box;
+            }
+            .slick-prev {
+                &::before {
+                content: "";
+                position: absolute;
+                background: url(../img/back.svg) no-repeat center center;
+                background-size: cover;
+                width: 30px;
+                height: 30px;
+                }
+            }
+            .slick-next {
+                &::before {
+                content: "";
+                position: absolute;
+                background: url(../img/next.svg) no-repeat center center;
+                background-size: cover;
+                width: 30px;
+                height: 30px;
+                }
+            }
+            .slick-dots li button {
+                background: rgba(17, 171, 176, 0.5);
+                border-radius: 100%;
+            }
+            .slick-dots li button:hover,
+            .slick-dots li button:focus
+            {
+                background: $textColor1;
+                border-radius: 100%;
+            }
+            
+            .slick-dots li.slick-active button:before
+            {
+                background: $bgColor1;
+                border-radius: 100%;
+            }
+            .slick-dots {
+                bottom: 0px;
+            }
+            .slick-next
+            {
+                right: 0px;
+                z-index: 1;
+            }
+            .slick-prev
+            {
+                left: 0px;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+
+
+
+
 
 
 
@@ -724,4 +824,115 @@ body {
   .zoomIn {
     animation: zoomIn;
     opacity: 1 !important;
+  }
+
+
+  @media (max-width: 1366px) {
+    .parallax_block {
+      background-attachment: scroll;
+    }
+  }
+
+  @media (max-width: 1170px) {
+    .education_block_wrapper .cards_block {
+      flex-wrap: wrap;
+    }
+  }
+  @media (max-width: 1000px) {
+    .main_bg_wrapper .parralax-to-top_block1 .parralax-to-top-item,
+    .main_bg_wrapper .parralax-to-top_block2 .parralax-to-top-item2,
+    .main_bg_wrapper .parralax-to-top_block4 .parralax-to-top-item4,
+    .main_bg_wrapper .parralax-to-top_block3 .parralax-to-top-item3 {
+        width: 80px;
+    }
+    .main_bg_wrapper .name_block .my_name {
+        font-size: 30px;
+    }
+    .main_bg_wrapper .name_block .header_about_me {
+        font-size: 14px;
+    }
+    .education_block_wrapper .portfolio_block .portfolio_link_mobile {
+        display: block;
+    }
+  }
+  @media (max-width: 768px) {
+    .about_me_block_wrapper .about_me_block_hide .about_me_block {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .about_me_block_wrapper .about_me_block_hide .about_me_block .text-side .contact_details_block {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .about_me_block_wrapper .about_me_block_hide .about_me_block .text-side .download-button {
+      margin: 0px;
+    }
+    .about_me_block_wrapper .about_me_block_hide .about_me_block .text-side {
+      width: 100%;
+      padding: 0px 20px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      opacity: 1;
+      -webkit-transition: 2s;
+      transition: 2s;
+    }
+    .education_block_wrapper .job_info {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .education_block_wrapper .job_info .skills {
+        width: 118px;
+    }
+    .education_block_wrapper .job_info .info {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        
+    }
+    .main_bg_wrapper nav ul {
+        display: none;
+    }
+    .arrow_to_about {
+        left: 46%;
+  }
+}
+  @media (max-width: 414px) {
+  .education_block_wrapper .portfolio_block .portfolio_item_wrapper {
+    width: 180px;
+    }
+    .main_bg_wrapper .parralax-to-top_block4 {
+        top: 596px;
+    }
+    .main_bg_wrapper .parralax-to-top_block3 {
+        left: 2%;
+    }
+    .main_bg_wrapper .parralax-to-top_block2 {
+        right: 22%;
+    }
+    .main_bg_wrapper .parralax-to-top_block2 {
+        position: absolute;
+        top: 114px;
+        right: 20%;
+    }
+    .main_bg_wrapper .parralax-to-top_block4 {
+        top: 323px;
+    }
+}
+@media (max-width: 375px) {
+    .education_block_wrapper .portfolio_block .portfolio_item_wrapper {
+      width: 170px;
+      }
+  }
+  @media (max-width: 320px) {
+    .education_block_wrapper .portfolio_block .portfolio_item_wrapper {
+      width: 140px;
+      }
+      .main_bg_wrapper .parralax-to-top_block1 {
+        position: absolute;
+        top: 414px;
+        left: 5%;
+    }
+    .main_bg_wrapper .name_block .header_about_me {
+        width: 100%;
+    }
   }

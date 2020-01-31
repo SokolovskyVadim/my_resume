@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+<div>
+    <input type="text" id="basket__input1">
+    <div>
+        <h1 class="product__name1">dsadasdasdasd</h1 class="">
+       
+        <button class="product__add-to-basket1">put me</button>
+    </div>
+    <div>
+        <div>
+            <div>
+                <h1 class="product__name1">dsadasdasdasd1231</h1 class="">
+            </div>
+        </div>
+        
+            <button class="product__add-to-basket1">put me</button>
+        
+
+    </div>
+    <div>
+        <h1 class="product__name1">dsadasdasdasd1321311</h1 class="">
+        <button class="product__add-to-basket1">put me</button>
+    </div>
+</div>
+
+    <script>
+        const basketNode = document.getElementById('basket__input1');
+
+        function handleProductAddToBasket(mouseEvent) {
+        const productNode = mouseEvent.currentTarget.parentNode;
+        const productNameNode = productNode.getElementsByClassName(
+            'product__name1'
+        )[0];
+        const productName = productNameNode.innerText;
+
+        basketNode.value = productName;
+        }
+
+        function handleBasketClear() {
+        basketNode.value = null;
+        }
+
+        Array.prototype.forEach.call(
+        document.getElementsByClassName('product__add-to-basket1'),
+        button => button.addEventListener('click', handleProductAddToBasket)
+        );
+
+        Array.prototype.forEach.call(
+        document.getElementsByClassName('basket__clear1'),
+        button => button.addEventListener('click', handleBasketClear)
+        );
+
+    </script>
+</body>
+</html>
