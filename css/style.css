@@ -1856,9 +1856,6 @@ footer .copyright {
   .main_bg_wrapper .parralax-to-top_block4 {
     top: 323px;
   }
-  .superman-block {
-    height: 120px;
-  }
   .footer .footer_bottom ul li {
     padding: 5px;
   }
@@ -1870,6 +1867,9 @@ footer .copyright {
   }
   .superman-block .superman img {
     width: 178px;
+  }
+  .superman-block {
+    height: 120px;
   }
 }
 
