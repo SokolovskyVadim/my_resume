@@ -696,11 +696,7 @@ body {
   line-height: 2;
 }
 
-.education_block_wrapper .parallax_block {
-  width: 100%;
-  background: url(../img/success.jpg) no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
+.education_block_wrapper .parallax_block-up {
   min-height: 300px;
 }
 
@@ -813,13 +809,6 @@ body {
 
 .portfolio_block .portfolio_link_mobile a:hover {
   color: #11ABB0;
-}
-
-.parallax_block {
-  width: 100%;
-  background: url(../img/computer-1245714_1920.jpg) no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .parallax_block .layer {
@@ -1075,12 +1064,6 @@ footer .copyright {
   text-align: center;
 }
 
-@media (max-width: 1366px) {
-  .parallax_block {
-    background-attachment: scroll;
-  }
-}
-
 @media (max-width: 1170px) {
   .education_block_wrapper .cards_block {
     -ms-flex-wrap: wrap;
@@ -1154,6 +1137,16 @@ footer .copyright {
   }
   .arrow_to_about {
     left: 46%;
+  }
+  .about_me_block_wrapper .working_gif {
+    width: 170px;
+    height: 124px;
+    left: 50%;
+    right: auto;
+    margin-left: -85px;
+    bottom: -55px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
   }
 }
 
