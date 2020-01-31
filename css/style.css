@@ -1142,7 +1142,7 @@ footer .footer_bottom ul {
 }
 
 footer .footer_bottom ul li {
-  padding: 20px;
+  padding: 10px;
 }
 
 footer .footer_bottom ul li a {
@@ -1705,6 +1705,10 @@ footer .copyright {
   opacity: 1;
 }
 
+#object2 {
+  display: none;
+}
+
 @media (max-width: 1170px) {
   .education_block_wrapper .cards_block {
     -ms-flex-wrap: wrap;
@@ -1737,6 +1741,12 @@ footer .copyright {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  #object {
+    display: none;
+  }
+  #object2 {
+    display: block;
   }
   .about_me_block_wrapper .about_me_block_hide .about_me_block .text-side .contact_details_block {
     -ms-flex-wrap: wrap;
@@ -1821,6 +1831,9 @@ footer .copyright {
   .education_block_wrapper .portfolio_block .portfolio_item_wrapper {
     width: 180px;
   }
+  .footer .footer_bottom ul li {
+    padding: 5px;
+  }
   .education_block_wrapper .job_info .skills .super {
     bottom: -7px;
     right: -40px;
@@ -1843,11 +1856,20 @@ footer .copyright {
   .main_bg_wrapper .parralax-to-top_block4 {
     top: 323px;
   }
+  .superman-block {
+    height: 120px;
+  }
+  .footer .footer_bottom ul li {
+    padding: 5px;
+  }
 }
 
 @media (max-width: 375px) {
   .education_block_wrapper .portfolio_block .portfolio_item_wrapper {
     width: 170px;
+  }
+  .superman-block .superman img {
+    width: 178px;
   }
 }
 
