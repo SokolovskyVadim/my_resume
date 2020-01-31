@@ -14,140 +14,14 @@ jQuery(document).ready(function($) {
         });
     });
 });
-// jQuery(document).ready(function($) {  
-//     $(window).scroll(function() {
-//         var height = $(window).scrollTop();
-//         // var box1 = $('.about_me_block_wrapper').offset().top;
-//         if(height > 300){
-//         $('.photo-side-wrapper').addClass('slideInLeft');
-//         } else{
-//         $('.photo-side-wrapper').removeClass('slideInLeft');
-//         }
-
-//     });
-// });
-// jQuery(document).ready(function($) {  
-//     $(window).scroll(function() {
-//         var height = $(window).scrollTop();
-//         // var box1 = $('.about_me_block_wrapper').offset().top;
-//         if(height > 300){
-//         $('.text-side').addClass('slideInRight');
-//         } else{
-//         $('.text-side').removeClass('slideInRight');
-//         }
-
-//     });
-// });
-// jQuery(document).ready(function($) {  
-//     $(window).scroll(function() {
-//         var height = $(window).scrollTop();
-//         var box1 = $('.about_me_block_wrapper').offset().top;
-//         if(height > 700){
-//         $('.working_gif').addClass('zoomIn');
-//         } else{
-//         $('.working_gif').removeClass('zoomIn');
-//         }
-
-//     });
-// });
-// jQuery(document).ready(function($) {  
-//     $(window).scroll(function() {
-//         var height = $(window).scrollTop();
-//         // var box1 = $('.about_me_block_wrapper').offset().top;
-//         if(height > 900){
-//         $('.card1').addClass('fadeIn');
-//         } else{
-//         $('.card1').removeClass('fadeIn');
-//         }
-
-//     });
-// });
-// jQuery(document).ready(function($) { 
-//     $(document).ready(function() {
-//         var windowHeight = $(window).height();
-    
-//         $(document).on('scroll', function() {
-//             $('.card1').each(function() {
-//                 var self = $(this),
-//                 height;
-//                 if (self.height() >= windowHeight) {
-//                     height = self.offset().top + windowHeight - 100;
-//                 } else {
-//                     height = self.offset().top + self.height();
-//                 }
-//                 if ($(document).scrollTop() + windowHeight >= height) {
-//                     self.addClass('fadeIn')
-//                 } else {
-//                     self.removeClass('fadeIn')
-//                 }
-//             });
-//         });
-//     });
-// });
-// jQuery(document).ready(function($) { 
-//     $(document).ready(function() {
-//         var windowHeight = $(window).height();
-    
-//         $(document).on('scroll', function() {
-//             $('.card2').each(function() {
-//                 var self = $(this),
-//                 height;
-//                 setTimeout(function(){  
-//                     if (self.height() >= windowHeight) {
-//                         height = self.offset().top + windowHeight - 100;
-//                     } else {
-//                         height = self.offset().top + self.height();
-//                     }
-//                     if ($(document).scrollTop() + windowHeight >= height) {
-//                         self.addClass('fadeIn')
-//                     } else {
-//                         self.removeClass('fadeIn')
-//                     }
-//                 }, 1500);    
-//             });
-//         });
-//     });
-// });
-
-// jQuery(document).ready(function($) {
-//     $(window).scroll(function() {
-//         var height = $(window).scrollTop();
-//         // var box1 = $('.about_me_block_wrapper').offset().top;
-//         setTimeout(function(){  
-//             if(height > 900){
-//             $('.card2').addClass('fadeIn');
-//             } else{
-//             $('.card2').removeClass('fadeIn');
-//             }
-//         }, 400);
-//     }); 
-// });
-// jQuery(document).ready(function($) {
-//     $(window).scroll(function() {
-//         var height = $(window).scrollTop();
-//         // var box1 = $('.about_me_block_wrapper').offset().top;
-//         setTimeout(function(){  
-//             if(height > 900){
-//             $('.card3').addClass('fadeIn');
-//             } else{
-//             $('.card3').removeClass('fadeIn');
-//             }
-//         }, 800);
-//     }); 
-// });
-// jQuery(document).ready(function($) {
-//     $(window).scroll(function() {
-//         var height = $(window).scrollTop();
-//         // var box1 = $('.about_me_block_wrapper').offset().top;
-//         setTimeout(function(){  
-//             if(height > 900){
-//             $('.card4').addClass('fadeIn');
-//             } else{
-//             $('.card4').removeClass('fadeIn');
-//             }
-//         }, 1200);
-//     }); 
-// });
+jQuery(document).ready(function($) {
+    $('.burger, .overlay').click(function(){
+        $('.burger').toggleClass('clicked');
+        $('.overlay').toggleClass('show');
+        $('.nav-mobile').toggleClass('show');
+        $('body').toggleClass('overflow');
+    });
+});
 jQuery(document).ready(function($) {
     $(window).bind('scroll',function(e){
         parallaxScroll();
@@ -199,3 +73,103 @@ jQuery(document).ready(function($) {
         });
     });
 });
+jQuery(document).ready(function($) {
+    $(window).scroll(function() {
+        if ($(this).scrollTop()>=200) {
+          // длительность анимации - 'slow'
+          // тип анимации -  'linear'
+          $('.desktop').addClass('active')
+        }
+        else {
+          $('.desktop').removeClass('active');
+        }
+      });
+});
+
+jQuery(document).ready(function($) {
+    $(".tab_item").not(":first").hide();
+    $(".wrapper_tabs .tab").click(function() {
+        $(".wrapper_tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
+        $(".tab_item").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+});
+
+$(document).ready(function($) {
+	$('.inter-number-button').click(function() {
+		$('.thanks-number-modal').fadeIn();
+		$('.give-number-modal').fadeOut();
+		$('.give-number-modal-buy').fadeOut();
+		return false;
+	});	
+	
+	$('.close-thanks-number-modal').click(function() {
+		$(this).parents('.thanks-number-modal').fadeOut();
+		return false;
+	});		
+  
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.thanks-number-modal').fadeOut();
+		}
+	});
+	
+	$('.thanks-number-modal').click(function(e) {
+		if ($(e.target).closest('.thanks-number-modal-in').length == 0) {
+			$(this).fadeOut();					
+		}
+	});
+  });
+  
+
+
+
+  
+  $(document).ready(function($) {
+	$('.give-number-modal-open-buy').click(function() {
+		$('.give-number-modal-buy').fadeIn();
+		return false;
+	});	
+	
+	$('.close-give-number-modal-buy').click(function() {
+		$(this).parents('.give-number-modal-buy').fadeOut();
+		return false;
+	});		
+  
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.give-number-modal-buy').fadeOut();
+		}
+	});
+	
+	$('.give-number-modal-buy').click(function(e) {
+		if ($(e.target).closest('.give-number-modal-in-buy').length == 0) {
+			$(this).fadeOut();					
+		}
+	});
+  });
+
+  (function($){
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+        $('.scrollup').click(function () {
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+    });
+})(jQuery);
+(function($){
+    $(document).ready(function () {
+        $('.scrollup-fixed').click(function () {
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+    });
+})(jQuery);
