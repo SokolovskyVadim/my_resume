@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="lib/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="lib/slickslider/slick.css">
     <link rel="stylesheet" href="lib/slickslider/slick-theme.css">
@@ -22,7 +23,7 @@
     <header class="main_bg_wrapper">
         <div class="main_bg"></div>
         <div class="container">
-            <nav class="smooth_menu">
+            <nav class="smooth_menu wow fadeIn" data-wow-duration="2s">
                 <div class="logo">
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
                         xmlns:svgjs="http://svgjs.com/svgjs" height="82.06199645996094" width="291.3699951171875">
@@ -67,12 +68,12 @@
                 </ul>
             </nav>
             <div class="name_block">
-                <div class="my_name slideInLeft">Я Вадим Соколовский</div>
-                <div class="header_about_me slideInRight">
+                <div class="my_name wow bounceInLeft" data-wow-duration="2s">Я Вадим Соколовский</div>
+                <div class="header_about_me wow bounceInRight" data-wow-duration="3s">
                     Я - веб разработчик, из Минска, создающий удивительные и эффективные сайты для всевозможных компаний
                     и людей. Ниже на странице, вы можете узнать обо мне больше!.
                 </div>
-                <ul class="social zoomInDown">
+                <ul class="social wow zoomInDown" data-wow-duration="2s">
                     <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa fa-vk"></i></a></li>
@@ -81,43 +82,44 @@
                     <li><a href="#"><i class="fa fa-skype"></i></a></li>
                 </ul>
             </div>
-            <div class="smooth_menu">
-                <a href="#about-me" class="arrow_to_about fadeIn">
-                    <i class="fa fa-angle-down"></i>
-                </a>
-            </div>
-            <div class="parralax-to-top_block1">
+            
+            <div class="parralax-to-top_block1 wow fadeIn" data-wow-duration="2s">
                 <div class="parralax-to-top-item">
                     <img src="img/css.png" alt="css">
                 </div>
             </div>
-            <div class="parralax-to-top_block2">
+            <div class="parralax-to-top_block2 wow fadeIn" data-wow-duration="2s">
                 <div class="parralax-to-top-item2">
                     <img src="img/html5.png" alt="css">
                 </div>
             </div>
-            <div class="parralax-to-top_block3">
+            <div class="parralax-to-top_block3 wow fadeIn" data-wow-duration="2s">
                 <div class="parralax-to-top-item3">
                     <img src="img/java.png" alt="css">
                 </div>
             </div>
-            <div class="parralax-to-top_block4">
+            <div class="parralax-to-top_block4 wow fadeIn" data-wow-duration="2s">
                 <div class="parralax-to-top-item4">
                     <img src="img/jQuery.png" alt="css">
                 </div>
             </div>
         </div>
+        <div class="smooth_menu">
+            <a href="#about-me" class="arrow_to_about wow fadeIn" data-wow-duration="2s">
+                <i class="fa fa-angle-down"></i>
+            </a>
+        </div>
     </header>
     <section class="about_me_block_wrapper" id="about-me">
         <div class="about_me_block_hide">
             <div class="container about_me_block">
-                <div class="photo-side-wrapper">
+                <div class="photo-side-wrapper wow fadeInLeft">
                     <div class="photo-side">
                         <img src="img/me.jpg" alt="мое фото">
                     </div>
-                    <div class="photo-side-oval"></div>
+                    <!-- <div class="photo-side-oval"></div> -->
                 </div>
-                <div class="text-side">
+                <div class="text-side wow fadeInRight">
                     <h2>Обо мне</h2>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                         totam rem aperiam,
@@ -153,18 +155,18 @@
                 </div>
             </div>
         </div>
-        <div class="working_gif">
+        <div class="working_gif wow flipInY" data-wow-delay="1s">
             <img src="img/working.gif" alt="working.gif">
         </div>
     </section>
     <section class="education_block_wrapper">
         <div class="container">
-            <div class="education_title">
+            <div class="education_title wow fadeIn">
                 Моё IT образование
             </div>
             <div class="card_wrapper">
                 <div class="cards_block">
-                    <div class="card_container card1">
+                    <div class="card_container card1 wow fadeIn" data-wow-delay="1s">
                         <div class="card">
                             <div class="front">
                                 <div class="logo_it_academy">
@@ -182,7 +184,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card_container card2">
+                    <div class="card_container card2 wow fadeIn" data-wow-delay="1.5s">
                         <div class="card">
                             <div class="front">
                                 <div class="logo_it_academy">
@@ -201,7 +203,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card_container card3">
+                    <div class="card_container card3 wow fadeIn" data-wow-delay="2s">
                         <div class="card">
                             <div class="front">
                                 <div class="logo_it_academy">
@@ -218,7 +220,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card_container card4">
+                    <div class="card_container card4 wow fadeIn" data-wow-delay="2.5s">
                         <div class="card">
                             <div class="front">
                                 <div class="logo_rs">
@@ -238,11 +240,11 @@
                     </div>
                 </div>
             </div>
-            <div class="education_title">
+            <div class="education_title wow rotateIn">
                 Мой опыт работы и скилы
             </div>
             <div class="job_info">
-                <div class="skills">
+                <div class="skills wow zoomInLeft" data-wow-delay="0.5s">
                     <ul>
                         <li>
                             HTML5
@@ -267,7 +269,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="info">
+                <div class="info wow zoomInRight" data-wow-delay="0.5s">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam deleniti officiis harum inventore
                     cum perspiciatis at iste. Enim autem repellendus temporibus minus asperiores quaerat, quas animi
                     provident hic atque architecto! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
@@ -278,10 +280,15 @@
                     architecto!
                 </div>
             </div>
-            <div class="education_title">
+        </div>
+        <div class="parallax_block wow fadeIn" data-wow-delay="0.5s">
+
+        </div>
+        <div class="container">
+            <div class="education_title wow jackInTheBox" data-wow-delay="0.5s">
                 Моё портфолио
             </div>
-            <div class="portfolio_block">
+            <div class="portfolio_block wow rollIn" data-wow-delay="0.5s">
                 <div class="portfolio_item_wrapper">
                     <a data-fancybox="portfolio_gallery" href="img/headphones.webp" class="portfolio_item">
                         <img src="img/headphones-min.webp" alt="headphones">
@@ -359,8 +366,9 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
-    <section class="parallax_block">
+    <section class="parallax_block wow fadeIn" data-wow-delay="0.5s">
         <div class="layer">
             <div class="container">
                 <div class="bottom_slider">
@@ -394,14 +402,62 @@
             </div>
         </div>
     </section>
-    <footer style="height: 1000px;">
+    <footer>
+        <div class="footer_top">
+            <div class="container wow fadeInUp">
+                <div class="footer_header">
+                    <span class="left">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                    <span class="right">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum omnis consequatur mollitia? Culpa nisi accusamus laboriosam libero ratione aliquid dolorum quis quos, dolore nemo ullam adipisci excepturi ad veniam impedit.
+                    </span>
+                </div>
+                <div class="footer_footer">
+                    <form>
+                        <div class="top_form">
+                            <div class="left">
+                                <input type="name" placeholder="Имя*:">
+                                <input type="tel" placeholder="Телефон*:">
+                                <input type="mail" placeholder="Email*:">
+                            </div>
+                            <div class="right">
+                                <textarea name="msg" placeholder="Ваше сообщение*:"></textarea>
+                            </div>
+                        </div>
+                        <div class="bottom_form">
+                            <button type="submit">Отправить</button>
+                        </div>
+                        <p></p>
+                    </form>
+                </div>
+            </div>
 
+        </div>
+        <div class="footer_bottom">
+            <div id="go_top"><a href=""><i class="fa fa-angle-down"></i></a></div>
+            <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+            <div class="copyright">
+                &#169; Разработано 2020 Sokolovsky &#124; Дизайн Sokolovsky
+            </div>
+        </div>     
     </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="lib/fancybox/jquery.fancybox.min.js"></script>
     <script src="lib/slickslider/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="js/scripts.js"></script>
 </body>
 
