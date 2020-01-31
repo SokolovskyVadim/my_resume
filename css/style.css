@@ -855,6 +855,8 @@ body {
   background-size: cover;
   width: 30px;
   height: 30px;
+  top: 0;
+  left: 0;
 }
 
 .parallax_block .layer .bottom_slider .slick-next::before {
@@ -864,6 +866,8 @@ body {
   background-size: cover;
   width: 30px;
   height: 30px;
+  top: 0;
+  right: 0;
 }
 
 .parallax_block .layer .bottom_slider .slick-dots li button {

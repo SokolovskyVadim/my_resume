@@ -148,8 +148,6 @@ jQuery(document).ready(function($) {
 //         }, 1200);
 //     }); 
 // });
-
-
 jQuery(document).ready(function($) {
     $(window).bind('scroll',function(e){
         parallaxScroll();
@@ -162,55 +160,42 @@ jQuery(document).ready(function($) {
         $('.parralax-to-top-item4').css('top',(0-(scrolled*.8))+'px');
     }
 });
-
-$(function(){
-    $('.back').click(function(){
-      $(this).addClass('card-back-back');
-      $('.front').addClass('flipcard-wrap-back');
-    });
-    $('.front').hover(function(){
-      $(this).removeClass('flipcard-wrap-back');
-      $('.back').removeClass('card-back-back');
-    });
-  });
-
-
 jQuery(document).ready(function($) {
-  $(document).ready(function(){
-    $('.bottom_slider').slick({
-        dots: true,
-        arrows: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        infinite: true,
-        autoplaySpeed: 2000,
-        responsive: [
-            {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
-            }
-            },
-            {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-            },
-            {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-            }
-        ]
+    $(document).ready(function(){
+        $('.bottom_slider').slick({
+            dots: true,
+            arrows: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            infinite: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+            ]
+        });
     });
-});
 });
