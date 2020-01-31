@@ -85,7 +85,6 @@ jQuery(document).ready(function($) {
         }
       });
 });
-
 jQuery(document).ready(function($) {
     $(".tab_item").not(":first").hide();
     $(".wrapper_tabs .tab").click(function() {
@@ -93,64 +92,57 @@ jQuery(document).ready(function($) {
         $(".tab_item").hide().eq($(this).index()).fadeIn()
     }).eq(0).addClass("active");
 });
-
-$(document).ready(function($) {
+jQuery(document).ready(function($) {
+    $(document).ready(function($) {
 	$('.inter-number-button').click(function() {
 		$('.thanks-number-modal').fadeIn();
 		$('.give-number-modal').fadeOut();
 		$('.give-number-modal-buy').fadeOut();
 		return false;
-	});	
-	
+    });
+});	
+jQuery(document).ready(function($) {	
 	$('.close-thanks-number-modal').click(function() {
 		$(this).parents('.thanks-number-modal').fadeOut();
 		return false;
-	});		
-  
+	});		 
 	$(document).keydown(function(e) {
 		if (e.keyCode === 27) {
 			e.stopPropagation();
 			$('.thanks-number-modal').fadeOut();
 		}
-	});
-	
+	});	
 	$('.thanks-number-modal').click(function(e) {
 		if ($(e.target).closest('.thanks-number-modal-in').length == 0) {
 			$(this).fadeOut();					
 		}
 	});
   });
-  
-
-
-
-  
+});	 
+jQuery(document).ready(function($) {	 
   $(document).ready(function($) {
 	$('.give-number-modal-open-buy').click(function() {
 		$('.give-number-modal-buy').fadeIn();
 		return false;
-	});	
-	
+	});		
 	$('.close-give-number-modal-buy').click(function() {
 		$(this).parents('.give-number-modal-buy').fadeOut();
 		return false;
-	});		
-  
+	});		 
 	$(document).keydown(function(e) {
 		if (e.keyCode === 27) {
 			e.stopPropagation();
 			$('.give-number-modal-buy').fadeOut();
 		}
 	});
-	
 	$('.give-number-modal-buy').click(function(e) {
 		if ($(e.target).closest('.give-number-modal-in-buy').length == 0) {
 			$(this).fadeOut();					
 		}
 	});
   });
-
-  (function($){
+});	
+jQuery(document).ready(function($) {
     $(document).ready(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {
@@ -164,12 +156,20 @@ $(document).ready(function($) {
             return false;
         });
     });
-})(jQuery);
-(function($){
+});	
+jQuery(document).ready(function($) {
     $(document).ready(function () {
         $('.scrollup-fixed').click(function () {
             $("html, body").animate({ scrollTop: 0 }, 600);
             return false;
         });
     });
-})(jQuery);
+});	
+jQuery(document).ready(function($) {
+    var window_width = $(window).width();    
+    $(window).scroll(function () { 
+        var scroll_position = $(window).scrollTop();
+        var object_position_left = (scroll_position / 2.5)*(scroll_position/window_width);
+        $('#object').css({'right':object_position_left});
+    });
+});	
