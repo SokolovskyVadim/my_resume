@@ -1541,6 +1541,16 @@ footer {
     .footer .footer_bottom ul li {
         padding: 5px;
     }
+    .main_bg_wrapper .name_block {
+        width: auto;
+        padding-bottom: 30px;
+        text-align: center;
+        position: static;
+        /* left: 50%; */
+        margin-left: auto;
+        /* top: 40%; */
+        margin-top: 315px;
+    }
 }
 @media (max-width: 375px) {
     .education_block_wrapper .portfolio_block .portfolio_item_wrapper {
