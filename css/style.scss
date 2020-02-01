@@ -1551,6 +1551,9 @@ footer {
         /* top: 40%; */
         margin-top: 315px;
     }
+    .main_bg_wrapper .name_block .header_about_me {
+        width: 200px;
+    }
 }
 @media (max-width: 375px) {
     .education_block_wrapper .portfolio_block .portfolio_item_wrapper {
@@ -1561,6 +1564,16 @@ footer {
     }
     .superman-block {
         height: 120px;
+    }
+    .main_bg_wrapper .name_block {
+        width: auto;
+        padding-bottom: 30px;
+        text-align: center;
+        position: static;
+        /* left: 50%; */
+        margin-left: auto;
+        /* top: 40%; */
+        margin-top: 283px;
     }
   }
   @media (max-width: 320px) {
