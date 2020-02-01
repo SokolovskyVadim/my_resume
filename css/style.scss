@@ -150,10 +150,7 @@ body {
         width: 65%;
         padding-bottom: 30px;
         text-align: center;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        margin-left: -32.5%;
+        margin: 0 auto;
         .my_name {
             font-size: 90px;
             color: $bgColor2;
